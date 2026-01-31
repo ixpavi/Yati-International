@@ -158,6 +158,16 @@ footer{
   z-index:9999;
 }
 
+.logo{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+
+.logo img:last-child{
+  height:40px;
+  width:auto;
+}
 
 
 @media (max-width:768px){
