@@ -1,4 +1,7 @@
+
 *{
+  transition: color .25s ease, background-color .25s ease, border-color .25s ease;
+
   margin:0;
   padding:0;
   box-sizing:border-box;
@@ -25,6 +28,20 @@ header{
   z-index:1000
 }
 
+header{
+  animation: slideDown .6s ease forwards;
+}
+@keyframes slideDown{
+  from{
+    transform:translateY(-20px);
+    opacity:0;
+  }
+  to{
+    transform:translateY(0);
+    opacity:1;
+  }
+}
+
 .nav{
   display:flex;
   justify-content:space-between;
@@ -38,6 +55,14 @@ header{
   color:#0A4DAA
 }
 
+.logo{
+  transition:transform .25s ease;
+}
+
+.logo:hover{
+  transform:scale(1.03);
+}
+
 nav a{
   margin-left:25px;
   text-decoration:none;
@@ -48,6 +73,25 @@ nav a{
 
 nav a:hover{
   color:#F4C430
+}
+
+nav a{
+  position:relative;
+}
+
+nav a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-6px;
+  width:0;
+  height:2px;
+  background:#F4C430;
+  transition:width .3s ease;
+}
+
+nav a:hover::after{
+  width:100%;
 }
 
 .hero{
@@ -67,6 +111,32 @@ nav a:hover{
   margin-bottom:30px
 }
 
+.hero h1,
+.hero p,
+.hero .btn{
+  animation: fadeUp .7s ease forwards;
+  opacity:0;
+}
+
+.hero p{
+  animation-delay:.15s;
+}
+
+.hero .btn{
+  animation-delay:.3s;
+}
+
+@keyframes fadeUp{
+  from{
+    transform:translateY(20px);
+    opacity:0;
+  }
+  to{
+    transform:translateY(0);
+    opacity:1;
+  }
+}
+
 .btn{
   background:#F4C430;
   color:#000000;
@@ -81,8 +151,31 @@ nav a:hover{
   color:#ffffff
 }
 
+.btn{
+  transition:transform .15s ease, box-shadow .15s ease;
+}
+
+.btn:active{
+  transform:scale(.96);
+}
+
 .section{
   padding:90px 0
+}
+.section{
+  animation: sectionFade .8s ease forwards;
+  opacity:0;
+}
+
+@keyframes sectionFade{
+  from{
+    opacity:0;
+    transform:translateY(30px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
 }
 
 .section h2{
@@ -114,6 +207,14 @@ nav a:hover{
   border-left:5px solid #F4C430;
   box-shadow:0 2px 10px rgba(0,0,0,.08)
 }
+
+.card,
+.distributor-box{
+  position:relative;
+  overflow:hidden;
+}
+
+
 
 footer{
   background:#F4C430;
@@ -156,6 +257,7 @@ footer{
   pointer-events:none;
   transform:translate(-50%,-50%);
   z-index:9999;
+  transition: transform .08s linear;
 }
 
 .logo{
@@ -174,4 +276,46 @@ footer{
   .cursor-dot{display:none}
 }
 
+.card,
+.team-card,
+.distributor-box{
+  transition:transform 0.25s ease, box-shadow 0.25s ease;
+}
 
+.card:hover,
+.team-card:hover,
+.distributor-box:hover{
+  transform:translateY(-6px);
+  box-shadow:0 10px 25px rgba(0,0,0,0.12);
+}
+
+.card,
+.distributor-box{
+  position:relative;
+  overflow:hidden;
+}
+
+.card::after,
+.distributor-box::after{
+    left:var(--x);
+    top:var(--y);
+
+  content:"";
+  position:absolute;
+  width:220px;
+  height:220px;
+  background:radial-gradient(
+    circle,
+    rgba(244,196,48,.35),
+    transparent 60%
+  );
+  opacity:0;
+  pointer-events:none;
+  transform:translate(-50%,-50%);
+  transition:opacity .25s ease;
+}
+
+.card:hover::after,
+.distributor-box:hover::after{
+  opacity:1;
+}
