@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Yati International Inc</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+<div class="logo">
+  <img src="images/YATI LOGO.jpg" alt="Yati International Inc Logo">
+</div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#brands">Brands</a>
+      <a href="#products">Products</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <section id="brands" class="section light">
+  <div class="container">
+    <h2>Authorized Distributor</h2>
+
+    <div class="distributor-box">
+      <img src="images/parker-logo.png" alt="Authorized Parker Distributor">
+      <p>
+        Yati International Inc is an <strong>Authorized Distributor of Parker Hannifin</strong>,
+        supplying genuine industrial motion and control components.
+      </p>
+    </div>
+    <br>
+    <a href="#contact" class="btn">Contact Us</a>
+  </div>
+</section>
+
+<section id="about" class="section">
+  <div class="container">
+    <h2>About Us</h2>
+    <p>
+      Yati International Inc is a Kota-based industrial supply company and an authorized distributor
+      of Parker Hannifin. We specialize in sourcing and supplying genuine industrial components
+      for diverse industrial applications.
+    </p>
+  </div>
+</section>
+
+
+
+  </div>
+</section>
+  <div class="container">
+    <h2>Authorized Brands</h2>
+    <div class="brand-box">
+      <strong>Parker Hannifin</strong><br>
+      Authorized Industrial Components Distributor
+    </div>
+  </div>
+</section>
+
+<section id="products" class="section">
+  <div class="container">
+    <h2>Industrial Components We Supply</h2>
+    <div class="grid">
+      <div class="card">Hydraulic Hoses & Fittings</div>
+      <div class="card">Pneumatic Components</div>
+      <div class="card">Valves & Connectors</div>
+      <div class="card">Seals & Accessories</div>
+      <div class="card">Motion & Control Systems</div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section light">
+  <div class="container">
+    <h2>Contact Us</h2>
+<p><strong>Address:</strong><br>
+Plot No. S 30–S 31, Chambal Industrial Area,<br>
+DCM Road, Opposite Multimetals Ltd,<br>
+Kota – 324003 (Raj), India
+</p>
+<br>
+<p><strong>Landline:</strong><br>
++91 0744-2480036, 2480037
+</p>
+<br>
+<p><strong>Mobile:</strong><br>
+<a href="tel:+919414180022">+91 94141 80022</a>
+</p>
+<br>
+<p><strong>Email:</strong><br>
+<a href="mailto:sales@yatiindia.com">sales@yatiindia.com</a>
+</p>
+
+  </div>
+</section>
+
+<footer>
+  © 2026 Yati International Inc. All rights reserved.
+</footer>
+<div class="cursor-dot"></div>
+<script>
+  const dot = document.querySelector('.cursor-dot');
+
+  let mouseX = 0, mouseY = 0;
+  let dotX = 0, dotY = 0;
+
+  document.addEventListener('mousemove', e => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+  });
+
+  function animate(){
+    dotX += (mouseX - dotX) * 0.08;
+    dotY += (mouseY - dotY) * 0.08;
+
+    dot.style.left = (dotX + 2) + 'px';
+    dot.style.top = (dotY + 6) + 'px';
+
+    requestAnimationFrame(animate);
+  }
+
+  animate();
+</script>
+
+
+
+</body>
+</html>

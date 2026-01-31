@@ -1,0 +1,165 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Inter',sans-serif
+}
+
+body{
+  color:#000000;
+  background:#ffffff
+}
+
+
+.container{
+  max-width:1200px;
+  margin:auto;
+  padding:0 20px
+}
+
+header{
+  position:fixed;
+  width:100%;
+  background:#ffffff;
+  border-bottom:1px solid #eee;
+  z-index:1000
+}
+
+.nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  height:70px
+}
+
+.logo{
+  font-size:20px;
+  font-weight:700;
+  color:#0A4DAA
+}
+
+nav a{
+  margin-left:25px;
+  text-decoration:none;
+  color:#000000;
+  font-weight:500
+}
+
+
+nav a:hover{
+  color:#F4C430
+}
+
+.hero{
+  padding:140px 0 100px;
+  background:#ffffff
+}
+
+.hero h1{
+  font-size:42px;
+  color:#000000;
+  margin-bottom:15px
+}
+
+
+.hero p{
+  max-width:600px;
+  margin-bottom:30px
+}
+
+.btn{
+  background:#F4C430;
+  color:#000000;
+  padding:14px 30px;
+  text-decoration:none;
+  font-weight:600
+}
+
+
+.btn:hover{
+  background:#0A4DAA;
+  color:#ffffff
+}
+
+.section{
+  padding:90px 0
+}
+
+.section h2{
+  color:#000000;
+  margin-bottom:20px
+}
+
+
+.light{
+  background:#f5f7fa
+}
+
+.brand-box{
+  padding:30px;
+  border-left:6px solid #F4C430;
+  background:#ffffff;
+  max-width:400px
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px
+}
+
+.card{
+  background:#ffffff;
+  padding:25px;
+  border-left:5px solid #F4C430;
+  box-shadow:0 2px 10px rgba(0,0,0,.08)
+}
+
+footer{
+  background:#F4C430;
+  color:#000000;
+  text-align:center;
+  padding:20px
+}
+
+.logo img{
+  height:50px;
+  width:auto;
+  display:block
+}
+
+.distributor-box{
+  background:#ffffff;
+  padding:30px;
+  max-width:600px;
+  border-left:6px solid #F4C430
+}
+
+.distributor-box img{
+  max-width:150px;
+  margin-bottom:10px;
+  display:block
+}
+
+.distributor-box p{
+  margin:0
+}
+
+.cursor-dot{
+  width:17px;
+  height:17px;
+  background:#F4C430;
+  border-radius:50%;
+  position:fixed;
+  top:0;
+  left:0;
+  pointer-events:none;
+  transform:translate(-50%,-50%);
+  z-index:9999;
+}
+
+
+
+@media (max-width:768px){
+  .cursor-dot{display:none}
+}
