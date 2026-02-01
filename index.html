@@ -11,19 +11,29 @@
 
 <header>
   <div class="container nav">
-<div class="logo">
-  <img src="images/yati.jpeg" alt="Yati Logo">
-  <img src="images/yati.png" alt="Yati International Inc">
-</div>
 
-    <nav>
+    <div class="logo">
+      <img src="images/yati.jpeg" alt="Yati Logo">
+      <img src="images/yati.png" alt="Yati International Inc">
+    </div>
+
+    <nav class="nav-links">
       <a href="#about">About</a>
       <a href="#brands">Brands</a>
       <a href="#products">Products</a>
       <a href="#contact">Contact</a>
     </nav>
+
+    <!-- Hamburger menu -->
+    <div class="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
   </div>
 </header>
+
 
 <section class="hero">
   <div class="container">
@@ -54,10 +64,10 @@
   </div>
 </section>
 
-
-
   </div>
 </section>
+
+<section class="section">
   <div class="container">
     <h2>Authorized Brands</h2>
     <div class="brand-box">
@@ -159,6 +169,23 @@ document.querySelectorAll('.card, .distributor-box').forEach(el=>{
     const rect = el.getBoundingClientRect();
     el.style.setProperty('--x', `${e.clientX - rect.left}px`);
     el.style.setProperty('--y', `${e.clientY - rect.top}px`);
+  });
+});
+</script>
+<script>
+const toggle = document.querySelector('.menu-toggle');
+const nav = document.querySelector('.nav-links');
+
+if(toggle && nav){
+  toggle.addEventListener('click', ()=>{
+    nav.classList.toggle('active');
+  });
+}
+</script>
+<script>
+document.querySelectorAll('.nav-links a').forEach(link=>{
+  link.addEventListener('click', ()=>{
+    document.querySelector('.nav-links').classList.remove('active');
   });
 });
 </script>
