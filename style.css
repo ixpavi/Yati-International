@@ -333,36 +333,43 @@ footer{
   background:#000;
 }
 
-/* Mobile */
+
+/* Mobile Header Layout - Logo Left, Hamburger Right */
 @media (max-width:768px){
-
-  .logo img{
-    height:36px;
-    width:auto;
+  
+  /* Container adjustment */
+  .nav{
+    position: relative;
+    padding: 0 15px;
   }
-
-  nav{
-    position:absolute;
-    top:70px;
-    right:0;
-    width:100%;
-    background:#ffffff;
-    display:none;
-    flex-direction:column;
-    padding:20px;
-    box-shadow:0 10px 30px rgba(0,0,0,.1);
+  
+  /* Logo small and left */
+  .logo{
+    justify-content: flex-start;
+    flex: 1;
   }
-
-  nav a{
-    margin:12px 0;
+  
+  .logo img:first-child{
+    height: 32px; /* Small Yati logo */
   }
-
+  
+  .logo img:last-child{
+    height: 28px; /* Small Yati International text */
+  }
+  
+  /* Hamburger top right */
   .menu-toggle{
-    display:flex;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    z-index: 1001;
   }
-
-  .nav-links.active{
-    display:flex;
+  
+  /* Adjust nav links dropdown position */
+  .nav-links{
+    top: 70px;
   }
+  
 }
-
