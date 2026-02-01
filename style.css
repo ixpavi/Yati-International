@@ -333,43 +333,68 @@ footer{
   background:#000;
 }
 
-
-/* Mobile Header Layout - Logo Left, Hamburger Right */
+/* ===== FORCE HAMBURGER VISIBILITY (MOBILE) ===== */
 @media (max-width:768px){
-  
-  /* Container adjustment */
-  .nav{
-    position: relative;
-    padding: 0 15px;
-  }
-  
-  /* Logo small and left */
-  .logo{
-    justify-content: flex-start;
-    flex: 1;
-  }
-  
-  .logo img:first-child{
-    height: 32px; /* Small Yati logo */
-  }
-  
-  .logo img:last-child{
-    height: 28px; /* Small Yati International text */
-  }
-  
-  /* Hamburger top right */
+
   .menu-toggle{
-    position: absolute;
-    right: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex;
-    z-index: 1001;
+    display:flex !important;
+    position:absolute;
+    right:15px;
+    top:50%;
+    transform:translateY(-50%);
+    z-index:9999;
   }
-  
-  /* Adjust nav links dropdown position */
+
+  .menu-toggle span{
+    width:26px;
+    height:3px;
+    background:#000;
+    display:block;
+  }
+
+  /* keep nav hidden initially */
   .nav-links{
-    top: 70px;
+    display:none;
   }
-  
+
+  /* dropdown when active */
+  .nav-links.active{
+    display:flex;
+    position:absolute;
+    top:70px;
+    left:0;
+    width:100%;
+    background:#fff;
+    flex-direction:column;
+    gap:20px;
+    padding:25px;
+    border-bottom:1px solid #eee;
+    z-index:9998;
+  }
+
+  /* shrink Yati International logo */
+  .logo img:last-child{
+    height:16px;
+  }
+
+  .logo img:first-child{
+    height:34px;
+  }
+
+}
+
+.menu-toggle span{
+  transition:transform .3s ease, opacity .3s ease;
+}
+
+.menu-toggle.active span:nth-child(1){
+  transform:translateY(8px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2){
+  opacity:0;
+}
+
+.menu-toggle.active span:nth-child(3){
+  transform:translateY(-8px) rotate(-45deg);
 }
