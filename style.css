@@ -395,6 +395,10 @@ footer{
   opacity:0;
 }
 
+html{
+  scroll-behavior:smooth;
+}
 .menu-toggle.active span:nth-child(3){
   transform:translateY(-8px) rotate(-45deg);
 }
+
