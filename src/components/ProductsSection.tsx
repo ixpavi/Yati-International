@@ -13,46 +13,55 @@ const products = [
   {
     title: "Hydraulic Systems",
     description: "Cylinders, pumps, motors, and complete hydraulic solutions",
+    alt: "Parker Hannifin Hydraulic Systems, Cylinders, Pumps, and Motors",
     image: hydraulicsImg,
   },
   {
     title: "Filtration",
     description: "Industrial filters for hydraulic, air, and fuel applications",
+    alt: "Industrial Filtration Systems for Hydraulic, Air, and Fuel Applications",
     image: filtrationImg,
   },
   {
     title: "Valves & Fittings",
     description: "Precision valves, connectors, and fluid control components",
+    alt: "Precision Industrial Valves, Fittings, Connectors, and Fluid Control Components",
     image: valvesImg,
   },
   {
     title: "Hoses & Tubing",
     description: "Industrial hoses, tubes, and fluid conveyance systems",
+    alt: "Industrial Hoses, Tubing, and Fluid Conveyance Systems",
     image: hosesImg,
   },
   {
     title: "Seals & O-Rings",
     description: "Precision sealing solutions for all applications",
+    alt: "Precision Industrial Seals, O-Rings, and Sealing Solutions",
     image: sealsImg,
   },
   {
     title: "Pumps & Motors",
     description: "High-performance pumps and hydraulic motors",
+    alt: "High-Performance Hydraulic Pumps and Motors",
     image: pumpsImg,
   },
   {
     title: "Pneumatic Actuators",
     description: "Heavy-duty pneumatic cylinders and rotary actuators engineered for critical power and nuclear environments",
+    alt: "Heavy-Duty Pneumatic Cylinders and Rotary Actuators for Critical Environments",
     image: pneumaticCylindersImg,
   },
   {
     title: "EMI Shielding & Thermal",
     description: "Precision EMI/RFI shielding materials and thermal interface products for sensitive power electronics",
+    alt: "Precision EMI/RFI Shielding Materials and Thermal Interface Products for Power Electronics",
     image: emiShieldingImg,
   },
   {
     title: "Conveyor Belts",
     description: "High-durability modular and synthetic belts for robust industrial material handling",
+    alt: "High-Durability Modular and Synthetic Conveyor Belts for Industrial Material Handling",
     image: conveyorBeltsImg,
   },
 ];
@@ -82,7 +91,7 @@ const ProductsSection = () => {
               <div className="aspect-[4/3] overflow-hidden rounded-lg mb-4">
                 <img
                   src={product.image}
-                  alt={product.title}
+                  alt={product.alt}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
