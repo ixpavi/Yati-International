@@ -1,12 +1,10 @@
-import { Factory, Truck, Droplet, Wrench, Building, Plane } from "lucide-react";
+import { Truck, Droplet, Wrench, Building } from "lucide-react";
 
 const industries = [
-  { icon: Factory, name: "Manufacturing", description: "Automotive, aerospace, and general manufacturing" },
   { icon: Truck, name: "Mobile Equipment", description: "Construction, agriculture, and material handling" },
   { icon: Droplet, name: "Oil & Gas", description: "Upstream, midstream, and downstream applications" },
   { icon: Wrench, name: "Machine Tools", description: "CNC machines and precision equipment" },
   { icon: Building, name: "Industrial Plants", description: "Power generation and process industries" },
-  { icon: Plane, name: "Aerospace", description: "Aviation and defense applications" },
 ];
 
 const IndustriesSection = () => {
@@ -19,7 +17,7 @@ const IndustriesSection = () => {
             Solutions for Every Industry
           </h2>
           <p className="text-muted-foreground text-lg">
-            From manufacturing to aerospace, we provide specialized industrial components 
+            We provide specialized industrial components
             and solutions tailored to the unique demands of each sector.
           </p>
         </div>
