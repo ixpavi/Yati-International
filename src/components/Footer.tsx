@@ -1,4 +1,4 @@
-import { Linkedin, Twitter, Facebook } from "lucide-react";
+import { Linkedin } from "lucide-react";
 import yatiMark from "@/assets/yati-mark-transparent.png";
 import yatiText from "@/assets/yati-text-transparent.png";
 
@@ -45,22 +45,12 @@ const Footer = () => {
 
           <div className="flex space-x-4">
             <a
-              href="#"
+              href="https://www.linkedin.com/company/yati-international-inc/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-8 h-8 rounded-lg bg-foreground/10 flex items-center justify-center hover:bg-primary transition-colors group"
             >
               <Linkedin className="w-4 h-4 text-foreground group-hover:text-primary-foreground" />
-            </a>
-            <a
-              href="#"
-              className="w-8 h-8 rounded-lg bg-foreground/10 flex items-center justify-center hover:bg-primary transition-colors group"
-            >
-              <Twitter className="w-4 h-4 text-foreground group-hover:text-primary-foreground" />
-            </a>
-            <a
-              href="#"
-              className="w-8 h-8 rounded-lg bg-foreground/10 flex items-center justify-center hover:bg-primary transition-colors group"
-            >
-              <Facebook className="w-4 h-4 text-foreground group-hover:text-primary-foreground" />
             </a>
           </div>
         </div>
