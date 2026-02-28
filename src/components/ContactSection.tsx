@@ -14,8 +14,8 @@ const ContactSection = () => {
               Let's Discuss Your Requirements
             </h2>
             <p className="text-muted-foreground mb-10">
-              Whether you need a single component or a complete system solution, our team 
-              is ready to help. Contact us for product inquiries, technical support, or 
+              Whether you need a single component or a complete system solution, our team
+              is ready to help. Contact us for product inquiries, technical support, or
               to request a quote.
             </p>
 
@@ -26,9 +26,17 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-foreground mb-1">Phone</h4>
-                  <a href="tel:+919414180022" className="text-muted-foreground hover:text-primary transition-colors">
-                    +91 94141 80022
-                  </a>
+                  <div className="flex flex-col gap-1">
+                    <a href="tel:+919414180022" className="text-muted-foreground hover:text-primary transition-colors">
+                      +91 94141 80022
+                    </a>
+                    <a href="tel:+917442480036" className="text-muted-foreground hover:text-primary transition-colors">
+                      +91 0744 2480036
+                    </a>
+                    <a href="tel:+917442480037" className="text-muted-foreground hover:text-primary transition-colors">
+                      +91 0744 2480037
+                    </a>
+                  </div>
                 </div>
               </div>
 
@@ -51,7 +59,7 @@ const ContactSection = () => {
                 <div>
                   <h4 className="font-semibold text-foreground mb-1">Address</h4>
                   <p className="text-muted-foreground">
-                    Plot No. S-30 & S-31, Chambal Industrial Area,DCM Road, Opposite Multimetals Ltd, Kota – 324003 (Raj), India
+                    Shop No. S30-S31, Chambal Industrial Area, DCM Road, Opposite Multimetals Ltd, Kota – 324003 (Raj), India
                   </p>
                 </div>
               </div>
