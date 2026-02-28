@@ -41,7 +41,7 @@ const CursorTrail = () => {
     return (
         <>
             <div
-                className="fixed top-0 left-0 w-4 h-4 rounded-full bg-accent pointer-events-none z-[100] transition-transform duration-100 mix-blend-difference"
+                className="fixed top-0 left-0 w-4 h-4 rounded-full bg-accent pointer-events-none z-[100] transition-transform duration-100"
                 style={{
                     transform: `translate(${position.x - 8}px, ${position.y - 8}px) scale(${isHovering ? 2 : 1})`,
                 }}
