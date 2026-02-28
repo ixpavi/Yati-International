@@ -51,9 +51,7 @@ const ContactSection = () => {
                 <div>
                   <h4 className="font-semibold text-foreground mb-1">Address</h4>
                   <p className="text-muted-foreground">
-                    Plot No. S 30–S 31, Chambal Industrial Area,<br />
-                    DCM Road, Opposite Multimetals Ltd,<br />
-                    Kota – 324003 (Raj), India
+                    Plot No. S-30 & S-31, Chambal Industrial Area,DCM Road, Opposite Multimetals Ltd, Kota – 324003 (Raj), India
                   </p>
                 </div>
               </div>
