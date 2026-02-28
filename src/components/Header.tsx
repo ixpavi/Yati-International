@@ -45,32 +45,40 @@ const Header = () => {
             </Button>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu Button with Custom Animation */}
           <button
-            className="lg:hidden text-foreground p-2"
+            className="lg:hidden relative w-10 h-10 flex items-center justify-center p-2 focus:outline-none"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="Toggle Navigation"
           >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            <div className="relative w-6 h-5">
+              <span className={`hamburger-line top-0 ${isMenuOpen ? 'top-1/2 -translate-y-1/2 rotate-45' : ''}`} />
+              <span className={`hamburger-line top-1/2 -translate-y-1/2 ${isMenuOpen ? 'opacity-0 scale-x-0' : 'opacity-100 scale-x-100'}`} />
+              <span className={`hamburger-line bottom-0 ${isMenuOpen ? 'bottom-1/2 translate-y-1/2 -rotate-45' : ''}`} />
+            </div>
           </button>
         </div>
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="lg:hidden py-4 border-t border-border bg-background">
-            <nav className="flex flex-col space-y-4">
-              {navItems.map((item) => (
+          <div className="lg:hidden py-4 border-t border-border bg-background/95 backdrop-blur-md animate-slide-down-menu shadow-lg">
+            <nav className="flex flex-col space-y-4 px-2">
+              {navItems.map((item, index) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-foreground hover:text-accent transition-colors font-medium py-2"
+                  className="text-foreground hover:text-accent hover:pl-2 transition-all duration-200 font-medium py-2 border-b border-border/40 last:border-0"
+                  style={{ animationDelay: `${index * 50}ms`, animationFillMode: 'both' }}
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  {item.name}
+                  <span className="animate-slide-up inline-block">{item.name}</span>
                 </a>
               ))}
-              <Button variant="accent" className="mt-4 hover:bg-primary hover:text-primary-foreground" onClick={() => setIsMenuOpen(false)} asChild>
-                <a href="#contact">Request Quote</a>
-              </Button>
+              <div className="pt-2 animate-slide-up" style={{ animationDelay: `${navItems.length * 50}ms`, animationFillMode: 'both' }}>
+                <Button variant="accent" className="w-full hover:bg-primary hover:text-primary-foreground" onClick={() => setIsMenuOpen(false)} asChild>
+                  <a href="#contact">Request Quote</a>
+                </Button>
+              </div>
             </nav>
           </div>
         )}
