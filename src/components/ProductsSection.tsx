@@ -5,6 +5,9 @@ import valvesImg from "@/assets/valves.jpg";
 import hosesImg from "@/assets/hoses.jpg";
 import sealsImg from "@/assets/seals.jpg";
 import pumpsImg from "@/assets/pumps.jpg";
+import pneumaticCylindersImg from "@/assets/pneumatic-cylinders.png";
+import emiShieldingImg from "@/assets/emi-shielding.png";
+import conveyorBeltsImg from "@/assets/conveyor-belts.png";
 
 const products = [
   {
@@ -37,6 +40,21 @@ const products = [
     description: "High-performance pumps and hydraulic motors",
     image: pumpsImg,
   },
+  {
+    title: "Pneumatic Actuators",
+    description: "Heavy-duty pneumatic cylinders and rotary actuators engineered for critical power and nuclear environments",
+    image: pneumaticCylindersImg,
+  },
+  {
+    title: "EMI Shielding & Thermal",
+    description: "Precision EMI/RFI shielding materials and thermal interface products for sensitive power electronics",
+    image: emiShieldingImg,
+  },
+  {
+    title: "Conveyor Belts",
+    description: "High-durability modular and synthetic belts for robust industrial material handling",
+    image: conveyorBeltsImg,
+  },
 ];
 
 const ProductsSection = () => {
@@ -49,7 +67,7 @@ const ProductsSection = () => {
             Industrial Components & Solutions
           </h2>
           <p className="text-muted-foreground text-lg">
-            We supply a comprehensive range of industrial components from world-leading 
+            We supply a comprehensive range of industrial components from world-leading
             manufacturers, ensuring quality and reliability for your operations.
           </p>
         </div>

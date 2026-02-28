@@ -4,7 +4,7 @@ const industries = [
   { icon: Truck, name: "Mobile Equipment", description: "Construction, agriculture, and material handling" },
   { icon: Droplet, name: "Oil & Gas", description: "Upstream, midstream, and downstream applications" },
   { icon: Wrench, name: "Machine Tools", description: "CNC machines and precision equipment" },
-  { icon: Building, name: "Industrial Plants", description: "Power generation and process industries" },
+  { icon: Building, name: "Industrial Plants", description: "Power generation, including nuclear applications, and process industries" },
 ];
 
 const IndustriesSection = () => {
