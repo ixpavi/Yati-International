@@ -1,6 +1,6 @@
 import { Linkedin, Twitter, Facebook } from "lucide-react";
-import yatiFavicon from "@/assets/yati-favicon.jpeg";
-import yatiLogo from "@/assets/yati-logo.png";
+import yatiMark from "@/assets/yati-mark-transparent.png";
+import yatiText from "@/assets/yati-text-transparent.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -35,14 +35,14 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           {/* Company Info */}
           <div className="flex items-center gap-3">
-            <img src={yatiFavicon} alt="Yati International" className="h-8 w-8 rounded object-contain" />
-            <img src={yatiLogo} alt="Yati International Inc." className="h-6 w-auto" />
+            <img src={yatiMark} alt="Yati International" className="h-8 w-8 object-contain" />
+            <img src={yatiText} alt="Yati International Inc." className="h-6 w-auto" />
           </div>
-          
+
           <p className="text-foreground/80 text-sm text-center">
             © {currentYear} Yati International Inc. All rights reserved.
           </p>
-          
+
           <div className="flex space-x-4">
             <a
               href="#"

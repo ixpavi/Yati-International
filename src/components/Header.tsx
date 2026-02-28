@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import yatiFavicon from "@/assets/yati-favicon.jpeg";
-import yatiLogo from "@/assets/yati-logo.png";
+import yatiMark from "@/assets/yati-mark-transparent.png";
+import yatiText from "@/assets/yati-text-transparent.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,8 +21,8 @@ const Header = () => {
         <div className="flex items-center justify-between h-[70px]">
           {/* Logo */}
           <a href="/" className="flex items-center gap-3 hover:scale-[1.03] transition-transform">
-            <img src={yatiFavicon} alt="Yati International" className="h-10 w-10 rounded object-contain" />
-            <img src={yatiLogo} alt="Yati International Inc." className="h-8 md:h-10 w-auto" />
+            <img src={yatiMark} alt="Yati International" className="h-10 w-10 object-contain" />
+            <img src={yatiText} alt="Yati International Inc." className="h-8 md:h-10 w-auto" />
           </a>
 
           {/* Desktop Navigation */}
