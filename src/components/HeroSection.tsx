@@ -18,6 +18,7 @@ const HeroSection = () => {
           </div>
 
           <h1 className="text-4xl md:text-5xl lg:text-[42px] font-bold text-foreground mb-4 animate-slide-up leading-tight">
+            <span className="sr-only">Yati International Inc. - </span>
             Engineering Excellence,{" "}
             <span className="text-primary">Delivered</span>
           </h1>
